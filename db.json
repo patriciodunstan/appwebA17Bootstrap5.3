@@ -1,0 +1,215 @@
+{
+  "canciones": [
+    {
+      "id": 1,
+      "fechaInscripcion": "01-12-2022",
+      "cancion": "Canción 1",
+      "precioCancion": 0.99,
+      "disponible": true
+    },
+    {
+      "id": 2,
+      "fechaInscripcion": "02-12-2022",
+      "cancion": "Canción 2",
+      "precioCancion": 1.29,
+      "disponible": false
+    },
+    {
+      "id": 3,
+      "fechaInscripcion": "03-12-2022",
+      "cancion": "Canción 3",
+      "precioCancion": 0.79,
+      "disponible": true
+    },
+    {
+      "id": 4,
+      "fechaInscripcion": "04-12-2022",
+      "cancion": "Canción 4",
+      "precioCancion": 1.49,
+      "disponible": true
+    },
+    {
+      "id": 5,
+      "fechaInscripcion": "05-12-2022",
+      "cancion": "Canción 5",
+      "precioCancion": 0.89,
+      "disponible": false
+    },
+    {
+      "id": 6,
+      "fechaInscripcion": "06-12-2022",
+      "cancion": "Canción 6",
+      "precioCancion": 1.99,
+      "disponible": true
+    },
+    {
+      "id": 7,
+      "fechaInscripcion": "07-12-2022",
+      "cancion": "Canción 7",
+      "precioCancion": 0.69,
+      "disponible": false
+    },
+    {
+      "id": 8,
+      "fechaInscripcion": "08-12-2022",
+      "cancion": "Canción 8",
+      "precioCancion": 1.79,
+      "disponible": true
+    },
+    {
+      "id": 9,
+      "fechaInscripcion": "09-12-2022",
+      "cancion": "Canción 9",
+      "precioCancion": 0.59,
+      "disponible": true
+    },
+    {
+      "id": 10,
+      "fechaInscripcion": "10-12-2022",
+      "cancion": "Canción 10",
+      "precioCancion": 2.29,
+      "disponible": false
+    },
+    {
+      "id": 11,
+      "fechaInscripcion": "11-12-2022",
+      "cancion": "Canción 11",
+      "precioCancion": 0.49,
+      "disponible": true
+    },
+    {
+      "id": 12,
+      "fechaInscripcion": "12-12-2022",
+      "cancion": "Canción 12",
+      "precioCancion": 1.69,
+      "disponible": true
+    },
+    {
+      "id": 13,
+      "fechaInscripcion": "13-12-2022",
+      "cancion": "Canción 13",
+      "precioCancion": 0.39,
+      "disponible": false
+    },
+    {
+      "id": 14,
+      "fechaInscripcion": "14-12-2022",
+      "cancion": "Canción 14",
+      "precioCancion": 2.49,
+      "disponible": true
+    },
+    {
+      "id": 15,
+      "fechaInscripcion": "15-12-2022",
+      "cancion": "Canción 15",
+      "precioCancion": 0.29,
+      "disponible": true
+    },
+    {
+      "id": 16,
+      "fechaInscripcion": "16-12-2022",
+      "cancion": "Canción 16",
+      "precioCancion": 1.89,
+      "disponible": false
+    },
+    {
+      "id": 17,
+      "fechaInscripcion": "17-12-2022",
+      "cancion": "Canción 17",
+      "precioCancion": 0.19,
+      "disponible": true
+    },
+    {
+      "id": 18,
+      "fechaInscripcion": "18-12-2022",
+      "cancion": "Canción 18",
+      "precioCancion": 2.69,
+      "disponible": true
+    },
+    {
+      "id": 19,
+      "fechaInscripcion": "19-12-2022",
+      "cancion": "Canción 19",
+      "precioCancion": 0.09,
+      "disponible": false
+    },
+    {
+      "id": 20,
+      "fechaInscripcion": "20-12-2022",
+      "cancion": "Canción 20",
+      "precioCancion": 1.99,
+      "disponible": true
+    },
+    {
+      "id": 21,
+      "fechaInscripcion": "21-12-2022",
+      "cancion": "Canción 21",
+      "precioCancion": 0.99,
+      "disponible": true
+    },
+    {
+      "id": 22,
+      "fechaInscripcion": "22-12-2022",
+      "cancion": "Canción 22",
+      "precioCancion": 2.49,
+      "disponible": false
+    },
+    {
+      "id": 23,
+      "fechaInscripcion": "23-12-2022",
+      "cancion": "Canción 23",
+      "precioCancion": 0.79,
+      "disponible": true
+    },
+    {
+      "id": 24,
+      "fechaInscripcion": "24-12-2022",
+      "cancion": "Canción 24",
+      "precioCancion": 1.29,
+      "disponible": false
+    }
+  ],
+
+  "artistas": [
+    {
+      "id": 1,
+      "nombre": "Shakira",
+      "genero": "Pop",
+      "pais": "Colombia",
+      "canciones": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23],
+      "activo": true
+    },
+    {
+      "id": 2,
+      "nombre": "The Beatles",
+      "genero": "Rock",
+      "pais": "Reino Unido",
+      "canciones": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+      "activo": true
+    },
+    {
+      "id": 3,
+      "nombre": "Beyoncé",
+      "genero": "R&B",
+      "pais": "Estados Unidos",
+      "canciones": [1, 4, 7, 10, 13, 16, 19, 22],
+      "activo": false
+    },
+    {
+      "id": 4,
+      "nombre": "Elton John",
+      "genero": "Pop/Rock",
+      "pais": "Reino Unido",
+      "canciones": [2, 5, 8, 11, 14, 17, 20, 23],
+      "activo": true
+    },
+    {
+      "id": 5,
+      "nombre": "Adele",
+      "genero": "Soul",
+      "pais": "Reino Unido",
+      "canciones": [3, 6, 9, 12, 15, 18, 21, 24],
+      "activo": true
+    }
+  ]
+}
