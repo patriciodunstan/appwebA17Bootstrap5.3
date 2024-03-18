@@ -1,0 +1,24 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: white;
+  font-weight: bold;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.btn {
+  margin-right: 5px;
+}

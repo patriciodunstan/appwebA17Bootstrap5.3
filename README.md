@@ -1,27 +1,38 @@
 # PruebaTecnicaCRUDAngularBootstrap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+# Prueba Tecnica CRUD SCD
 
-## Development server
+## En esta prueba se utilizo las siguiente tecnologias:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 17
+- Bootstrap 5.3
+- css
+- Sweetalert2
+- json-server
 
-## Code scaffolding
+De las tecnologias utilizadas solo fueron requeridas Angular y Bootstrap, pero se utilizo sweetalert2 para las alertas en formularios y mensajes necesarios. Tambien se utilizo json-server para tener una API con que trabajar y poder hacer las peticiones http en los servicios.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Clonar e instalar
 
-## Build
+1. Clonar repositorio: ejecutamos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`git clone git@github.com:patriciodunstan/appwebA17Bootstrap5.3.git`
 
-## Running unit tests
+Este comando clonara el proyecto en el directorio donde nosotros estemos posicionado
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Realizar instalacion: ejecutamos
+   `npm i`
+   Este comando instalara todaslas dependencias utilizadas en este proyecto.
 
-## Running end-to-end tests
+3. iniciar proyecto:
+   Para inicar nuestro proyecto debemos ejecutar los siguientes 2 script:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Script para iniciar proyecto angular
+  `npm run start:ng`
 
-## Further help
+- Srcript para inicar db json-server
+  `npm run start:db`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Con esto realizado, ya podemos revisar y probar el proyecto.
+
+### Proyecto esta realizado, pero en pruebas genero problemas con rutas, error qu no se logro resolver a pesar de buscar info.

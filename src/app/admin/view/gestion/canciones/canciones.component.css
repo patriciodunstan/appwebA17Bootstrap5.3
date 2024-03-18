@@ -1,0 +1,22 @@
+/* Estilo personalizado para la tabla */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Estilo para los encabezados de la tabla */
+.table thead th {
+  background-color: #343a40; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para las filas impares */
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Color de fondo para las filas impares */
+}
+
+/* Estilo para los botones de acción */
+.btn {
+  margin-right: 5px; /* Espacio entre botones */
+}

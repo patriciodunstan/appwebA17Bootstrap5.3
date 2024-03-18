@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="card titulo">
+        <div class="card-body">
+
+            <h1 class="text-center">{{ titulo }}</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="formArtista">
+        <div class="card mt-5 mb-5">
+            <div class="card-body">
+                <strong>Datos Artista</strong>
+                <div class="row mt-3">
+                    <div class="col-lg-6 col-12">
+                        <ng-container *ngFor="let control of [this.asformControl(formArtista.controls.nombre)]">
+                            <div class="form-group">
+                                <label for="nombre">nombre</label>
+                                <input class="form-control" type="text" formControlName="nombre" id="nombre" />
+                                <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                    <span *ngIf="control.errors?.['required']">El nombre es requerido.</span>
+                                    <span *ngIf="control.errors?.['pattern']">Deben ser solo letras</span>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <ng-container *ngFor="let control of [this.asformControl(formArtista.controls.genero)]">
+                            <div class="form-group">
+                                <label for="genero">Genero Musical</label>
+                                <input class="form-control" type="text" formControlName="genero" id="genero" />
+                                <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                    <span *ngIf="control.errors?.['required']">El nombre es requerido.</span>
+                                    <span *ngIf="control.errors?.['pattern']">Deben ser solo letras</span>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col">
+                    <ng-container *ngFor="let control of [this.asformControl(formArtista.controls.pais)]">
+                        <div class="form-group">
+                            <label for="pais">Pais de origen</label>
+                            <input class="form-control" type="text" formControlName="pais" id="pais" />
+                            <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                <span *ngIf="control.errors?.['required']">El pais es requerido.</span>
+                                <span *ngIf="control.errors?.['pattern']">Deben ser solo letras</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="col">
+                    <ng-container *ngFor="let control of [this.asformControl(formArtista.controls.activo)]">
+                        <div class="form-group">
+                            <label for="activo">Activo</label>
+                            <select class="form-control" formControlName="activo" id="activo">
+                                <option value="true">Activo</option>
+                                <option value="false">Desactivado</option>
+                            </select>
+                            <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                <span *ngIf="control.errors?.['required']">El campo es requerido</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div class="alert alert-danger mt-3" *ngIf="!formValido">
+                    <span>{{ mensaje }}</span>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                    <button class="btn btn-primary me-md-2" (click)="esNuevo ? agregar() : editar()">
+                        Guardar Datos
+                        <i class="fa-regular fa-floppy-disk"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

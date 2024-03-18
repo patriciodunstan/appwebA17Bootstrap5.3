@@ -5,7 +5,7 @@ export class Artista {
     nombre: string;
     genero: string;
     pais: string;
-    canciones: Canciones[];
+    canciones?: Canciones[];
     activo: boolean;
 
     constructor(id: number, nombre: string, genero: string, pais: string, canciones: Canciones[], activo: boolean) {

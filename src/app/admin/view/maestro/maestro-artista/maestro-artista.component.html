@@ -1,0 +1,29 @@
+<h1>Maestro Artista</h1>
+<table class="table table-striped table-hover align middle">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Pais</th>
+            <th>Canciones</th>
+            <th>Activo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let artista of listArtistas">
+            <th scope="row">{{artista.id}}</th>
+            <td>{{ artista.nombre }}</td>
+            <td>{{ artista.genero }}</td>
+            <td>{{ artista.pais }}</td>
+            <td>{{ artista.canciones }}</td>
+            <td>{{ artista.activo }}</td>
+            <td>
+                <button type="button" class="fas fa-edit btn btn-primary" (click)="editar(artista.id)">Editar</button>
+                <button type="button" class="fas fa-trash btn btn-danger" routerLinkActive="active"
+                    (click)="eliminar(artista.id)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

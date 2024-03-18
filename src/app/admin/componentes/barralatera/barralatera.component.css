@@ -1,3 +1,9 @@
 .btn-toggle[aria-expanded="true"] {
   color: rgba(0, 0, 0, 0.85);
 }
+
+a {
+  span {
+    font-size: 15px;
+  }
+}

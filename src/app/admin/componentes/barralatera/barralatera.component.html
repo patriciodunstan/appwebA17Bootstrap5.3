@@ -1,41 +1,96 @@
+<!-- <div class="container">
+    <div class="logo">
+        <span>DEMO</span><br /><br />
+
+    </div>
+    <hr />
+
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="bi bi-people"></i>&nbsp;Gestión Administrativa
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  
+                    <div class="panel-title">
+                        <i class="bi bi-person"></i>&nbsp;artista
+                    </div>
+                    <a class="list-item" routerLink="test" [routerLinkActive]="['active']" (click)="agregarArtista()">
+                        <i class="bi bi-person-plus"></i>
+                        <span style="padding-top: 5px;">Crear</span>
+                    </a>
+                    <a class="list-item" routerLink="/admin/administracion/maestroArtista">
+                        <i class="bi bi-journal"></i>
+                        <span style="padding-top: 5px;">Listado</span>
+                    </a>
+                </div>
+            </div>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 
+                    <div class="panel-title">
+                        <i class="bi bi-person"></i>&nbsp;Canciones
+                    </div>
+                    <a class="list-item" href="#" (click)="agregarArtista()">
+                        <i class="bi bi-person-plus"></i>
+                        <span style="padding-top: 5px;">Crear</span>
+                    </a>
+                    <a class="list-item" routerLink="/admin/administracion/maestroCanciones">
+                        <i class="bi bi-journal"></i>
+                        <span style="padding-top: 5px;">Listado</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
     <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-        <img src="https://www.scd.cl/content/uploads/2018/04/logo_header.png" alt="logo" width="121px">
-        <span class="fs-5 fw-semibold">Sistema Gestión y artista</span>
+        <img src="https://www.scd.cl/content/uploads/2018/04/logo_header.png" class="bi me-2" width="30" height="24">
+
+
+        <span class="fs-5 fw-semibold">SCD</span>
     </a>
     <ul class="list-unstyled ps-0">
         <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#cancion-collapse" aria-expanded="true">
-                ::before
-                "Artista"
+                data-bs-target="#home-collapse" aria-expanded="false">
+                Artista
             </button>
-            <div class="collapse show" id="cancion-collapse">
+            <div class="collapse" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">Listar</a></li>
-                    <li><a href="#" class="link-dark rounded">Agregar</a></li>
-                    <li><a href="#" class="link-dark rounded">Editar</a></li>
-                    <li><a href="#" class="link-dark rounded">Eliminar</a></li>
+                    <li><a (click)="agregarArtista()" class="link-dark rounded">Agregar Artista</a></li>
+                    <li><a [routerLink]="['/src/app/admin/view/maestro/maestro-artista']" routerLinkActive="['active']"
+                            class="link-dark rounded">Maestro</a></li>
+
                 </ul>
             </div>
         </li>
+
     </ul>
     <ul class="list-unstyled ps-0">
         <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#cancion-collapse" aria-expanded="true">
-                ::before
-                "Canciones"
+                data-bs-target="#home-collapse" aria-expanded="false">
+                Canciones
             </button>
-            <div class="collapse show" id="cancion-collapse">
+            <div class="collapse" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">Listar</a></li>
-                    <li><a href="#" class="link-dark rounded">Agregar</a></li>
-                    <li><a href="#" class="link-dark rounded">Editar</a></li>
-                    <li><a href="#" class="link-dark rounded">Eliminar</a></li>
+                    <li><a (click)="agregarCancion()" class="link-dark rounded">Agregar Canción</a></li>
+                    <li><a [routerLink]="['/src/app/admin/view/maestro/maestro-canciones']"
+                            routerLinkActive="['active']" class="link-dark rounded">Maestro</a></li>
+
                 </ul>
             </div>
         </li>
-    </ul>
 
+    </ul>
 </div>

@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="card titulo">
+        <div class="card-body">
+
+            <h1 class="text-center">{{ titulo }}</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="formCanciones">
+        <div class="card mt-5 mb-5">
+            <div class="card-body">
+                <strong>Datos Canciones</strong>
+                <div class="row mt-3">
+                    <div class="col-lg-6 col-12">
+                        <ng-container *ngFor="let control of [this.asformControl(formCanciones.controls.nombre)]">
+                            <div class="form-group">
+                                <label for="nombre">nombre</label>
+                                <input class="form-control" type="text" formControlName="nombre" id="nombre" />
+                                <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                    <span *ngIf="control.errors?.['required']">El nombre es requerido.</span>
+                                    <span *ngIf="control.errors?.['pattern']">Deben ser solo letras</span>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <ng-container *ngFor="let control of [this.asformControl(formCanciones.controls.letra)]">
+                            <div class="form-group">
+                                <label for="letra">Letra Canción</label>
+                                <input class="form-control" type="text" formControlName="letra" id="letra" />
+                                <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                    <span *ngIf="control.errors?.['required']">El Campo debe ser llenado</span>
+                                    <span *ngIf="control.errors?.['pattern']">Deben ser solo letras</span>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col">
+                    <ng-container *ngFor="let control of [this.asformControl(formCanciones.controls.fechaInscripcion)]">
+                        <div class="form-group">
+                            <label for="fechaInscripcion">Fecha Incripción</label>
+                            <input class="form-control" type="date" formControlName="fechaInscripcion"
+                                id="fechaInscripcion" />
+                            <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                <span *ngIf="control.errors?.['required']">Fecha es requerda</span>
+                                <span *ngIf="control.errors?.['pattern']">debe ser formato dd-MM-yyyy</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="col">
+                    <ng-container
+                        *ngFor="let control of [this.asformControl(formCanciones.controls.valorCancionTocada)]">
+                        <div class="form-group">
+                            <label for="valorCancionTocada">Fecha Incripción</label>
+                            <input class="form-control" type="number" formControlName="valorCancionTocada"
+                                id="valorCancionTocada" />
+                            <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                <span *ngIf="control.errors?.['required']">Fecha es requerda</span>
+                                <span *ngIf="control.errors?.['pattern']">debe ser formato dd-MM-yyyy</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="col">
+                    <ng-container *ngFor="let control of [this.asformControl(formCanciones.controls.disponible)]">
+                        <div class="form-group">
+                            <label for="disponible"></label>
+                            <select class="form-control" formControlName="disponible" id="disponible">
+                                <option value="true">Disponible</option>
+                                <option value="false">No Disponible</option>
+                            </select>
+                            <div *ngIf="control.invalid && control.dirty" class="alert alert-danger mt-2">
+                                <span *ngIf="control.errors?.['required']">El campo es requerido</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="artistaId">Artista</label>
+                        <select class="form-control" formControlName="artistaId" id="artistaId">
+                            <option *ngFor="let artista of listaArtista" [value]="artista.id">{{ artista.nombre }}
+                            </option>
+                        </select>
+                        <div *ngIf="formCanciones.controls.artistaId.invalid && formCanciones.controls.artistaId.dirty"
+                            class="alert alert-danger mt-2">
+                            <span *ngIf="formCanciones.controls.artistaId.errors?.['required']">Debe seleccionar un
+                                artista</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger mt-3" *ngIf="!formValido">
+                    <span>{{ mensaje }}</span>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                    <button class="btn btn-primary me-md-2" (click)="esNuevo ? agregar() : editar()">
+                        Guardar Datos
+                        <i class="fa-regular fa-floppy-disk"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
