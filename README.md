@@ -1,8 +1,8 @@
-# PruebaTecnicaCRUDAngularBootstrap
+# CRUD Angular Bootstrap
 
-# Prueba Tecnica CRUD SCD
 
-## En esta prueba se utilizo las siguiente tecnologias:
+
+## En esta proyecto se utilizaron las siguiente tecnologias:
 
 - Angular 17
 - Bootstrap 5.3
